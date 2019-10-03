@@ -1,6 +1,7 @@
 const greeting = process.env.GREETING || 'Hello';
 const port = process.env.PORT || 8080;
 const serverstarthr = process.hrtime();
+
 require('http').createServer(function (req, res) {
   // if workload parameter provided then simulate workload
   const reqstarthr = process.hrtime();
