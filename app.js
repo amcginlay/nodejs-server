@@ -2,7 +2,7 @@ const greeting = process.env.GREETING || 'Hello';
 const port = process.env.PORT || 8080;
 const serverstarthr = process.hrtime();
 require('http').createServer(function (req, res) {
-  // if argument provided then simulate workload
+  // if workload parameter provided then simulate workload
   const reqstarthr = process.hrtime();
   const workload = parseFloat(require('url').parse(req.url, true).query.workload) || 0.0;
   while (true) {
